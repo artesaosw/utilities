@@ -1,0 +1,7 @@
+package dev.craftsmanship.utils.errors;
+
+public enum ErrorType {
+
+    INVALID_ARGUMENT, INVALID_OPERATION, INCONSISTENT_INFORMATION, INCONSISTENT_STATE, UNDEFINED_ERROR, UNKNOWN_ERROR
+
+}
