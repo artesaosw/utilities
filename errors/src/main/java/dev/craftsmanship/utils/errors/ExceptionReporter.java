@@ -245,4 +245,36 @@ public class ExceptionReporter implements ErrorReporter {
                 exceptionCause,
                 additionalData);
     }
+
+    @Override
+    public void undefinedError(@NotBlank String message) {
+        throwException(
+                exceptionClass(ErrorType.UNDEFINED_ERROR),
+                message);
+    }
+
+    @Override
+    public <T extends Throwable> void undefinedError(@NotBlank String message, @NotNull T exceptionCause) {
+        throwException(
+                exceptionClass(ErrorType.UNDEFINED_ERROR),
+                message,
+                exceptionCause);
+    }
+
+    @Override
+    public <S extends Serializable> void undefinedError(@NotBlank String message, @NotNull S additionalData) {
+        throwException(
+                exceptionClass(ErrorType.UNDEFINED_ERROR),
+                message,
+                additionalData);
+    }
+
+    @Override
+    public <T extends Throwable, S extends Serializable> void undefinedError(@NotBlank String message, @NotNull T exceptionCause, @NotNull S additionalData) {
+        throwException(
+                exceptionClass(ErrorType.UNDEFINED_ERROR),
+                message,
+                exceptionCause,
+                additionalData);
+    }
 }

@@ -38,4 +38,12 @@ public interface ErrorReporter {
 
     <T extends Throwable, S extends Serializable> void inconsistentState(@NotBlank String message, @NotNull T exceptionCause, @NotNull S additionalData);
 
+    void undefinedError(@NotBlank String message);
+
+    <T extends Throwable> void undefinedError(@NotBlank String message, @NotNull T exceptionCause);
+
+    <S extends Serializable> void undefinedError(@NotBlank String message, @NotNull S additionalData);
+
+    <T extends Throwable, S extends Serializable> void undefinedError(@NotBlank String message, @NotNull T exceptionCause, @NotNull S additionalData);
+
 }
