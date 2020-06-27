@@ -1,4 +1,4 @@
-package dev.craftsmanship.utils.strams;
+package dev.craftsmanship.utils.streams;
 
 import dev.craftsmanship.utils.errors.Errors;
 

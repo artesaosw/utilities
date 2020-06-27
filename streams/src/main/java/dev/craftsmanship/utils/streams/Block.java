@@ -1,4 +1,4 @@
-package dev.craftsmanship.utils.strams;
+package dev.craftsmanship.utils.streams;
 
 @FunctionalInterface
 public interface Block {
