@@ -20,23 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="104989b4-0072-4d2d-ad99-3e407618c103" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_projectlombok_lombok_1_18_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDDUtils.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utilities/ddd_utils/DomainEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utilities/ddd_utils/DomainEventID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utilities/ddd_utils/DomainObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utilities/ddd_utils/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utilities/ddd_utils/EventPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utilities/ddd_utils/IdentifiedObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utilities/ddd_utils/Identity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utilities/ddd_utils/ValueObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/craftsmanship/utilities/ddd_utils/Identity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/craftsmanship/utilities/ddd_utils/Identity.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +59,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.42068964" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -113,10 +98,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="306" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1593292717026" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1593285939793">
+    <state x="121" y="0" key="SettingsEditor" timestamp="1593362472966">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593285939793" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593362472966" />
     <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593284234237">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
