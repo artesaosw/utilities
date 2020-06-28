@@ -1,4 +1,4 @@
-# utilities
+# Utilities
 
 This repository has auxiliar libs for MMD approach. It's composed by 3 projects:
 
