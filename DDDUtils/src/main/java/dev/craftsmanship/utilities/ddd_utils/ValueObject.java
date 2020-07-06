@@ -7,7 +7,7 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
 
-public interface ValueObject extends DomainObject {
+public abstract class ValueObject extends DomainObject {
 
     private boolean equals(Field field, Object o1, Object o2){
         try {
@@ -40,7 +40,7 @@ public interface ValueObject extends DomainObject {
         return result[0];
     }
 
-    public default <T extends DomainObject> boolean equals(T other) {
+    public <T extends DomainObject> boolean equals(T other) {
         if (other == null){
             return false;
         }
@@ -59,7 +59,7 @@ public interface ValueObject extends DomainObject {
         return result;
     }
 
-    public static int hashCode(@NotNull DomainObject domainObject){
+    public int hashCode(@NotNull DomainObject domainObject){
         int result = 1;
         Class clazz = domainObject.getClass();
         while (!clazz.equals(Object.class)){

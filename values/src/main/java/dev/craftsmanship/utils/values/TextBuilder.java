@@ -41,12 +41,6 @@ public class TextBuilder extends ValueBuilder {
             setInvalidValueMessage(Value.DEFAULT_INVALID_VALUE_MESSAGE);
         }
 
-        if (getBounds() == null){
-            setBounds(Range.define(
-                    RangeBound.min(String.class),
-                    RangeBound.max(String.class)));
-        }
-
         if (pattern == null){
             pattern = Pattern.compile(UNIVERSAL_PATTERN);
         }
@@ -57,7 +51,6 @@ public class TextBuilder extends ValueBuilder {
                     RangeBound.max(String.class));
         }
 
-        return new Text(isNullable(), getBounds(), getInvalidValueMessage(),
-                pattern, sizeRange);
+        return new Text(getInvalidValueMessage(), pattern, sizeRange);
     }
 }
