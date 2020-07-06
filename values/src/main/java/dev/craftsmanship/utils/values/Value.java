@@ -1,84 +1,73 @@
 package dev.craftsmanship.utils.values;
 
+import com.google.common.collect.Maps;
+import dev.craftsmanship.utiils.validations.GenericValidator;
+import dev.craftsmanship.utiils.validations.Validatable;
+import dev.craftsmanship.utils.streams.Result;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.util.Objects;
+import java.util.*;
 
 import static dev.craftsmanship.utils.errors.Errors.invalidParameter;
 import static dev.craftsmanship.utils.errors.Errors.undefinedError;
 
 
 @Getter
-public abstract  class Value<T extends Comparable> implements Comparable<T>, Serializable {
+public abstract  class Value<T extends Comparable, V extends GenericValidator> implements Comparable<T>, Validatable ,Serializable {
 
-    public static final String DEFAULT_INVALID_VALUE_MESSAGE = "Invalid value.";
+    static final String VALUE_FIELD_NAME = "internalValue";
+    static final String DEFAULT_INVALID_VALUE_MESSAGE = "Invalid value.";
 
     @Setter(AccessLevel.PACKAGE)
     private T internalValue;
 
-    private boolean nullable;
-
-    private Range bounds;
-
+    @Setter(AccessLevel.PACKAGE)
     private String invalidMessage;
 
-    public Value(boolean nullable, Range bounds, String invalidValueMessage) {
-        this.nullable = nullable;
-        this.bounds = bounds;
-        this.invalidMessage = invalidValueMessage;
+    private Collection<V> validators =  new HashSet<>();
+
+
+    @Override
+    public Map<String, Collection<V>> validators() {
+        return Map.of(VALUE_FIELD_NAME, validators);
     }
 
-    protected boolean validateBounds() {
-        return bounded() ?
-                getBounds().validate(getInternalValue()) :
-                true;
-
+    public void defineValidators(@NotNull @NotEmpty Collection<V> validators){
+        this.validators = validators;
     }
 
-    protected void customValidate(){ }
-
-    private boolean violatesNullableConstraint() {
-        return !nullable && internalValue == null;
+    public void removeValidators(){
+        validators.clear();
     }
 
-    private void validate() {
-
-        if (violatesNullableConstraint()){
-            invalidParameter("Null values aren't acceptable in a non-nullable value.");
-        }
-
-        if (!validateBounds()){
-            invalidParameter("Value does not match defined bounds.");
-        };
-
-        customValidate();
-    }
-
-    private void initialize(boolean nullable, @NotBlank String invalidMessage){
-        this.nullable = nullable;
-        this.invalidMessage = invalidMessage;
-    }
-
-    public final boolean bounded(){
-        return bounds != null;
+    @Override
+    public Map<String, Result> validate() {
+        Boolean result[] = new Boolean[]{true};
+        StringBuffer buffer = new StringBuffer();
+        validators.forEach(
+                validator -> {
+                    Result currentResult = validator.validate(internalValue);
+                    result[0] = result[0] && currentResult.sucesso();
+                    if (!currentResult.sucesso()){
+                        buffer.append(currentResult.mensagem());
+                    }
+                });
+        return Map.of(
+                VALUE_FIELD_NAME,
+                result[0] ?
+                Result.positive() :
+                Result.negative(
+                        buffer.toString()));
     }
 
     public final boolean hasValue() {
         return getInternalValue() != null;
-    }
-
-    @Override
-    public int compareTo(T o) {
-        if (internalValue != null && o != null){
-            return internalValue.compareTo(o);
-        } else if (internalValue == null) {
-            return -1;
-        }
-        return 1;
     }
 
     public void updateValue(T value){
@@ -96,7 +85,7 @@ public abstract  class Value<T extends Comparable> implements Comparable<T>, Ser
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Value)) return false;
-        Value<?> value = (Value<?>) o;
+        Value value = (Value) o;
         return Objects.equals(internalValue, value.internalValue);
     }
 
@@ -110,5 +99,15 @@ public abstract  class Value<T extends Comparable> implements Comparable<T>, Ser
         return "Value{" +
                 "internalValue=" + internalValue +
                 '}';
+    }
+
+    @Override
+    public int compareTo(T o) {
+        if (internalValue != null && o != null){
+            return internalValue.compareTo(o);
+        } else if (internalValue == null) {
+            return -1;
+        }
+        return 1;
     }
 }

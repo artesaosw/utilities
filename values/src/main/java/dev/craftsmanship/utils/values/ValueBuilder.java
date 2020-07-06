@@ -13,21 +13,7 @@ import javax.validation.constraints.NotNull;
 @Setter(AccessLevel.PROTECTED)
 public abstract class ValueBuilder {
 
-    private boolean nullable;
-
-    private Range bounds;
-
     private String invalidValueMessage;
-
-    public ValueBuilder nullable(boolean nullable){
-        this.nullable = nullable;
-        return this;
-    }
-
-    public ValueBuilder withBounds(@NotNull Range bounds){
-        this.bounds = bounds;
-        return this;
-    }
 
     public ValueBuilder withInvalidValueMessage(@NotBlank String invalidValueMessage){
         this.invalidValueMessage = invalidValueMessage;

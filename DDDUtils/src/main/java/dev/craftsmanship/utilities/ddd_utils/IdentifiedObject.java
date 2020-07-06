@@ -12,7 +12,7 @@ import static dev.craftsmanship.utils.errors.Errors.*;
 
 @MappedSuperclass
 @Getter
-public abstract class IdentifiedObject<T extends Identity> implements Serializable {
+public abstract class IdentifiedObject<T extends Identity> extends DomainObject implements Serializable {
 
     private T identity;
 
@@ -23,6 +23,8 @@ public abstract class IdentifiedObject<T extends Identity> implements Serializab
             undefinedError(t.getMessage(), t);
         }
     }
+
+    protected IdentifiedObject() { }
 
     @Override
     public boolean equals(Object o) {

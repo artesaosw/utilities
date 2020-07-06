@@ -10,11 +10,15 @@ import javax.validation.constraints.NotNull;
 
 @MappedSuperclass
 @Getter
-public abstract class Entity<T extends Identity> extends IdentifiedObject implements DomainObject{
+public abstract class Entity<T extends Identity> extends IdentifiedObject{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long databaseID;
+
+    protected Entity() {
+        super();
+    }
 
     protected Entity(@NotNull Class identityClass) {
         super(identityClass);

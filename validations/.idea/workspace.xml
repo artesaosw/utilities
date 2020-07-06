@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8d97916d-6c98-49e6-9a7d-3915979915eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/Bounds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/DateTimeValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/DateTimeValidatorBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/DateValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/DateValidatorBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/GenericValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/IntegerValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/IntegerValidatorBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/NullableValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/NumberValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/NumberValidatorBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/StringValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/StringValidatorBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/Validatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/craftsmanship/utiils/validations/ValueType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/validations-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validations.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/TextConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/Values.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DDDUtils/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DDDUtils/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DDDUtils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DDDUtils/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DDDUtils/src/main/java/dev/craftsmanship/utilities/ddd_utils/DomainObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DDDUtils/src/main/java/dev/craftsmanship/utilities/ddd_utils/DomainObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DDDUtils/src/main/java/dev/craftsmanship/utilities/ddd_utils/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DDDUtils/src/main/java/dev/craftsmanship/utilities/ddd_utils/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DDDUtils/src/main/java/dev/craftsmanship/utilities/ddd_utils/IdentifiedObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DDDUtils/src/main/java/dev/craftsmanship/utilities/ddd_utils/IdentifiedObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DDDUtils/src/main/java/dev/craftsmanship/utilities/ddd_utils/ValueObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DDDUtils/src/main/java/dev/craftsmanship/utilities/ddd_utils/ValueObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../errors/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../errors/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/RangeType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/TextBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/TextBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/Value.java" beforeDir="false" afterPath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/Value.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/ValueBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/ValueBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/src/main/java/dev/craftsmanship/utils/values/ValueCharacteristic.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1eJ1t96S3PtDtI4imiKAGovRU3s" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/dev/crafstmanship/utiils/validations" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rlinssilva\pessoal\projetos\utilities\validations\src\main\java\dev\crafstmanship\utiils\validations" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8d97916d-6c98-49e6-9a7d-3915979915eb" name="Default Changelist" comment="" />
+      <created>1594025093196</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594025093196</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1594072197194">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1594072197194" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1594025563367">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1594025563367" />
+  </component>
+</project>
