@@ -1,18 +1,19 @@
 package dev.craftsmanship.utils.values;
 
-import com.google.common.collect.Maps;
-import dev.craftsmanship.utiils.validations.GenericValidator;
-import dev.craftsmanship.utiils.validations.Validatable;
 import dev.craftsmanship.utils.streams.Result;
+import dev.craftsmanship.utils.validations.GenericValidator;
+import dev.craftsmanship.utils.validations.Validatable;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.util.*;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Objects;
 
 import static dev.craftsmanship.utils.errors.Errors.invalidParameter;
 import static dev.craftsmanship.utils.errors.Errors.undefinedError;
@@ -32,6 +33,7 @@ public abstract  class Value<T extends Comparable, V extends GenericValidator> i
 
     private Collection<V> validators =  new HashSet<>();
 
+    protected abstract Class valueClass();
 
     @Override
     public Map<String, Collection<V>> validators() {
@@ -103,11 +105,15 @@ public abstract  class Value<T extends Comparable, V extends GenericValidator> i
 
     @Override
     public int compareTo(T o) {
-        if (internalValue != null && o != null){
-            return internalValue.compareTo(o);
-        } else if (internalValue == null) {
-            return -1;
+        if (internalValue == null && o == null){
+            return 0;
+        } else if (o == null) {
+            return internalValue.hashCode();
+        } else if (!valueClass().isAssignableFrom(o.getClass())){
+            invalidParameter("Value to compare is from a different type");
+        } else if (internalValue == null){
+            return -1 * o.hashCode();
         }
-        return 1;
+        return internalValue.compareTo(o);
     }
 }

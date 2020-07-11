@@ -1,15 +1,15 @@
-package dev.craftsmanship.utiils.validations;
+package dev.craftsmanship.utils.validations;
 
 import dev.craftsmanship.utils.streams.Result;
 
 import javax.validation.constraints.NotBlank;
 import java.util.Objects;
 
-public class NullableValidator implements GenericValidator<Object> {
+public class NullValidator implements GenericValidator<Object> {
 
     private String errorMessage;
 
-    public NullableValidator(@NotBlank String errorMessage) {
+    public NullValidator(@NotBlank String errorMessage) {
         this.errorMessage = errorMessage;
     }
 
@@ -19,7 +19,7 @@ public class NullableValidator implements GenericValidator<Object> {
     }
 
     @Override
-    public NullableValidator nullValidator() {
+    public NullValidator nullValidator() {
         return this;
     }
 
@@ -33,8 +33,8 @@ public class NullableValidator implements GenericValidator<Object> {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof NullableValidator)) return false;
-        NullableValidator that = (NullableValidator) o;
+        if (!(o instanceof NullValidator)) return false;
+        NullValidator that = (NullValidator) o;
         return Objects.equals(errorMessage, that.errorMessage);
     }
 

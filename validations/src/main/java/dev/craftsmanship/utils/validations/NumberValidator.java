@@ -1,4 +1,4 @@
-package dev.craftsmanship.utiils.validations;
+package dev.craftsmanship.utils.validations;
 
 import dev.craftsmanship.utils.streams.Result;
 
@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class NumberValidator implements GenericValidator<BigDecimal> {
 
-    NullableValidator nullableValidator;
+    NullValidator nullValidator;
 
     Bounds bounds = Bounds.noBounds(BigDecimal.class);
 
@@ -15,11 +15,11 @@ public class NumberValidator implements GenericValidator<BigDecimal> {
     }
 
     public boolean nullValidation(){
-        return nullableValidator != null;
+        return nullValidator != null;
     };
 
-    public NullableValidator nullValidator(){
-        return nullableValidator;
+    public NullValidator nullValidator(){
+        return nullValidator;
     }
 
     public boolean boundsValidation(){
@@ -59,12 +59,12 @@ public class NumberValidator implements GenericValidator<BigDecimal> {
         if (this == o) return true;
         if (!(o instanceof NumberValidator)) return false;
         NumberValidator that = (NumberValidator) o;
-        return Objects.equals(nullableValidator, that.nullableValidator) &&
+        return Objects.equals(nullValidator, that.nullValidator) &&
                 Objects.equals(bounds, that.bounds);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nullableValidator, bounds);
+        return Objects.hash(nullValidator, bounds);
     }
 }

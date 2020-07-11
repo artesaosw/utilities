@@ -1,4 +1,4 @@
-package dev.craftsmanship.utiils.validations;
+package dev.craftsmanship.utils.validations;
 
 import dev.craftsmanship.utils.streams.Result;
 
@@ -14,7 +14,7 @@ public class StringValidator implements GenericValidator<String> {
 
     String nullErrorMessage = DEFAULT_NULL_ERROR_MESSAGE;
 
-    NullableValidator nullableValidator;
+    NullValidator nullValidator;
 
     Bounds bounds = Bounds.noBounds(Long.class);
 
@@ -27,11 +27,11 @@ public class StringValidator implements GenericValidator<String> {
     }
 
     public boolean nullValidation(){
-        return nullableValidator != null;
+        return nullValidator != null;
     };
 
-    public NullableValidator nullValidator(){
-        return nullableValidator;
+    public NullValidator nullValidator(){
+        return nullValidator;
     }
 
     public boolean boundsValidation(){
@@ -80,7 +80,7 @@ public class StringValidator implements GenericValidator<String> {
         if (!(o instanceof StringValidator)) return false;
         StringValidator that = (StringValidator) o;
         return Objects.equals(nullErrorMessage, that.nullErrorMessage) &&
-                Objects.equals(nullableValidator, that.nullableValidator) &&
+                Objects.equals(nullValidator, that.nullValidator) &&
                 Objects.equals(bounds, that.bounds) &&
                 Objects.equals(pattern, that.pattern) &&
                 Objects.equals(regexErrorMesage, that.regexErrorMesage);
@@ -88,6 +88,6 @@ public class StringValidator implements GenericValidator<String> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(nullErrorMessage, nullableValidator, bounds, pattern, regexErrorMesage);
+        return Objects.hash(nullErrorMessage, nullValidator, bounds, pattern, regexErrorMesage);
     }
 }

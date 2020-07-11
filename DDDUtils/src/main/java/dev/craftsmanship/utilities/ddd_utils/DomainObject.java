@@ -1,8 +1,9 @@
 package dev.craftsmanship.utilities.ddd_utils;
 
 import com.google.common.collect.Maps;
-import dev.craftsmanship.utiils.validations.GenericValidator;
+import dev.craftsmanship.utils.validations.GenericValidator;
 import dev.craftsmanship.utils.streams.Result;
+import dev.craftsmanship.utils.validations.Validatable;
 
 import javax.validation.constraints.NotNull;
 import java.lang.reflect.Field;
@@ -12,10 +13,10 @@ import java.util.Map;
 
 import static dev.craftsmanship.utils.errors.Errors.*;
 
-public abstract class DomainObject {
+public abstract class DomainObject implements Validatable {
 
     @NotNull
-    protected abstract <T extends GenericValidator> Map<String, Collection<T>> validators();
+    public abstract <T extends GenericValidator> Map<String, Collection<T>> validators();
 
     private Collection<GenericValidator> validators(Field field) {
         return validators().get(field.getName());

@@ -1,4 +1,4 @@
-package dev.craftsmanship.utiils.validations;
+package dev.craftsmanship.utils.validations;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;

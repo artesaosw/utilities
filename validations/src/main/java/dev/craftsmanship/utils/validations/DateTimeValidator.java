@@ -1,16 +1,17 @@
-package dev.craftsmanship.utiils.validations;
+package dev.craftsmanship.utils.validations;
 
 import dev.craftsmanship.utils.streams.Result;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-public class DateValidator implements GenericValidator<LocalDate> {
+public class DateTimeValidator implements GenericValidator<LocalDateTime> {
 
-    NullableValidator nullableValidator;
+    NullValidator nullValidator;
 
     Bounds bounds = Bounds.noBounds(LocalDate.class);
 
-    public DateValidator() {
+    public DateTimeValidator() {
 
     }
 
@@ -20,7 +21,7 @@ public class DateValidator implements GenericValidator<LocalDate> {
     }
 
     @Override
-    public NullableValidator nullValidator() {
+    public NullValidator nullValidator() {
         return null;
     }
 
@@ -28,13 +29,12 @@ public class DateValidator implements GenericValidator<LocalDate> {
         return bounds != null;
     }
 
-    private Result nullValidation(LocalDate value) {
+    private Result nullValidation(LocalDateTime value) {
         return GenericValidator.super.validate(value);
     }
 
     @Override
-    public Result validate(LocalDate value) {
-
+    public Result validate(LocalDateTime value) {
         boolean success = true;
         StringBuffer errorMsgs = new StringBuffer();
 

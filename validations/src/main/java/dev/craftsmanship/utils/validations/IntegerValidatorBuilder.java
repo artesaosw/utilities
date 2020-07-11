@@ -1,4 +1,4 @@
-package dev.craftsmanship.utiils.validations;
+package dev.craftsmanship.utils.validations;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public class IntegerValidatorBuilder {
 
-    private Optional<NullableValidator> nullableValidator;
+    private Optional<NullValidator> nullableValidator;
 
     private Optional<Bounds> bounds;
 
@@ -14,7 +14,7 @@ public class IntegerValidatorBuilder {
     }
 
     public IntegerValidatorBuilder nullable(@NotBlank String nullErrorMessages){
-        nullableValidator=Optional.of(new NullableValidator(nullErrorMessages));
+        nullableValidator=Optional.of(new NullValidator(nullErrorMessages));
         return this;
     }
 
@@ -27,7 +27,7 @@ public class IntegerValidatorBuilder {
 
         final IntegerValidator validator = new IntegerValidator();
 
-        nullableValidator.ifPresent(value -> validator.nullableValidator = value);
+        nullableValidator.ifPresent(value -> validator.nullValidator = value);
         bounds.ifPresent(value -> validator.bounds = value);
 
         return validator;
