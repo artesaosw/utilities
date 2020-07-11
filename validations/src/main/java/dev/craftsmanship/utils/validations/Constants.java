@@ -1,7 +1,6 @@
-package dev.craftsmanship.utils.values;
+package dev.craftsmanship.utils.validations;
 
 public class Constants {
-
     private static final char FIRST_UTF16_CHARACTER = (char) 0x000000;
     private static final char LAST_UTF16_CHARACTER = (char) 0x2F9F04;
 

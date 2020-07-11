@@ -1,4 +1,4 @@
-package dev.craftsmanship.utiils.validations;
+package dev.craftsmanship.utils.validations;
 
 import dev.craftsmanship.utils.streams.Result;
 
@@ -6,7 +6,7 @@ public interface GenericValidator<T extends Object> {
 
     boolean nullValidation();
 
-    NullableValidator nullValidator();
+    NullValidator nullValidator();
 
     default Result validate(T value){
         Result result = Result.positive();

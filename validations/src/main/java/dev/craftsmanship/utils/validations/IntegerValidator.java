@@ -1,4 +1,4 @@
-package dev.craftsmanship.utiils.validations;
+package dev.craftsmanship.utils.validations;
 
 import dev.craftsmanship.utils.streams.Result;
 
@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class IntegerValidator implements GenericValidator<Long> {
 
-    NullableValidator nullableValidator;
+    NullValidator nullValidator;
 
     Bounds bounds = Bounds.noBounds(Long.class);
 
@@ -16,12 +16,12 @@ public class IntegerValidator implements GenericValidator<Long> {
 
     @Override
     public boolean nullValidation(){
-        return nullableValidator != null;
+        return nullValidator != null;
     };
 
     @Override
-    public NullableValidator nullValidator(){
-        return nullableValidator;
+    public NullValidator nullValidator(){
+        return nullValidator;
     }
 
     public boolean boundsValidation(){
@@ -61,19 +61,19 @@ public class IntegerValidator implements GenericValidator<Long> {
         if (this == o) return true;
         if (!(o instanceof IntegerValidator)) return false;
         IntegerValidator that = (IntegerValidator) o;
-        return Objects.equals(nullableValidator, that.nullableValidator) &&
+        return Objects.equals(nullValidator, that.nullValidator) &&
                 Objects.equals(bounds, that.bounds);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nullableValidator, bounds);
+        return Objects.hash(nullValidator, bounds);
     }
 
     @Override
     public String toString() {
         return "IntegerValidator{" +
-                "nullableValidator=" + nullableValidator +
+                "nullableValidator=" + nullValidator +
                 ", bounds=" + bounds +
                 '}';
     }

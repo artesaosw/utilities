@@ -1,4 +1,4 @@
-package dev.craftsmanship.utiils.validations;
+package dev.craftsmanship.utils.validations;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class StringValidatorBuilder {
 
-    private Optional<NullableValidator> nullableValidator;
+    private Optional<NullValidator> nullableValidator;
 
     private Optional<Bounds> bounds;
 
@@ -21,8 +21,8 @@ public class StringValidatorBuilder {
         regexPattern = Optional.empty();
     }
 
-    public StringValidatorBuilder nullable(@NotBlank String nullErrorMessages){
-        nullableValidator=Optional.of(new NullableValidator(nullErrorMessages));
+    public StringValidatorBuilder notNull(@NotBlank String nullErrorMessages){
+        nullableValidator=Optional.of(new NullValidator(nullErrorMessages));
         return this;
     }
 
@@ -41,7 +41,7 @@ public class StringValidatorBuilder {
         StringValidator ret = new StringValidator();
 
         nullableValidator.ifPresent(
-                value -> {ret.nullableValidator = value;}
+                value -> {ret.nullValidator = value;}
         );
 
         bounds.ifPresent(

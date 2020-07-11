@@ -1,4 +1,4 @@
-package dev.craftsmanship.utiils.validations;
+package dev.craftsmanship.utils.validations;
 
 import dev.craftsmanship.utils.streams.Result;
 
